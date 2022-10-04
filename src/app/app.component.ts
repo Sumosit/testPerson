@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
     let maximumId: any = Math.max.apply(Math, this.data.map(o => o.id));
     // когда много полей, удобней было сделать проверку ниже с помощью reactive forms,
     // через параметр valid и в целом это намного удобней будет на дальней дистанции
-    if (this.name || this.surname || this.age) {
+    if (this.name && this.surname && this.age) {
       this.data.push({
         id: maximumId + 1,
         name: this.name,

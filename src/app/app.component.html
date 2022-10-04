@@ -21,9 +21,11 @@
           <td><span>{{item?.name}}</span></td>
           <td><span>{{item?.surname}}</span></td>
           <td><span>{{item?.age}}</span></td>
-          <td class="f-nc gap-4 pointer">
-            <svg-icon (click)="deleteRowByCard(item?.id)" class="btn-delete" src="assets/images/delete.svg"></svg-icon>
-            <span>Удалить</span>
+          <td class="btn-delete gap-4 pointer">
+<!--            <div>-->
+<!--              <svg-icon (click)="deleteRowByCard(item?.id)" src="assets/images/delete.svg"></svg-icon>-->
+<!--            </div>-->
+            <span class="us-none" (click)="deleteRowByCard(item?.id)">Удалить</span>
           </td>
         </tr>
         </tbody>
