@@ -1,1 +1,157 @@
 /* You can add global styles to this file, and also import other style files */
+$col-1: black;
+$col-2: white;
+$col-3: red;
+$col-4: pink;
+$col-5: #1f1f1f;
+$shadow-1: 4px 4px 5 pdx 26px rgba(255, 255, 255, 0.2);
+$shadow-2: 0 0 5px 5px rgba(255, 255, 255, 0.2);
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-style: normal;
+  font-family: 'Futura PT', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: $col-1;
+  color: $col-2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-delete {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transition: all 0.3s;
+    background: $col-3;
+
+    svg {
+      path {
+        fill: $col-2;
+      }
+    }
+  }
+
+  svg {
+    path {
+      fill: $col-3;
+    }
+  }
+}
+
+main {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  > div {
+    height: fit-content;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: $shadow-1;
+    background: #1a1919;
+
+    &.left {
+      width: 540px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        input {
+          width: fit-content;
+          padding: 4px 10px;
+          border-style: solid;
+          border-radius: 4px;
+        }
+
+        button {
+          width: fit-content;
+          padding: 4px 10px;
+        }
+      }
+    }
+  }
+
+  .table-field {
+    overflow-y: auto;
+    height: 200px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid $col-4;
+
+    table {
+      table-layout: auto;
+      width: 100%;
+      text-align: left;
+
+      tr {
+        &:hover {
+          font-weight: 600;
+        }
+
+        td, th {
+          &:nth-child(1), &:nth-child(2) {
+            text-align: center;
+          }
+
+          &:last-child, &:nth-last-child(1) {
+            text-align: left;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  .block-field {
+    overflow-y: auto;
+    width: 500px;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 40% 1fr 1fr;
+    grid-template-rows: 160px 160px 160px;
+    grid-gap: 20px;
+
+    .block {
+      height: 160px;
+      background: $col-5;
+      box-shadow: $shadow-2;
+
+      .block-header {
+        padding: 5px 10px 5px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $col-2;
+
+        svg-icon {
+          margin-left: auto;
+        }
+      }
+
+      .block-body {
+        padding: 10px 10px 10px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
