@@ -33,6 +33,35 @@ body {
   align-items: center;
 }
 
+.btn-svg {
+  cursor: pointer;
+  &:hover {
+    transition: all 0.3s;
+    background: $col-3;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg {
+    width: 26px;
+    height: 26px;
+    path {
+      fill: $col-2;
+    }
+  }
+}
+
+.btn-text {
+  &:hover {
+    cursor: pointer;
+    color: $col-3
+  }
+}
+
 .btn-delete {
   cursor: pointer;
   display: flex;
@@ -180,7 +209,7 @@ main {
         align-items: center;
         border-bottom: 1px solid $col-2;
 
-        svg-icon {
+        .btn-svg {
           margin-left: auto;
         }
       }
