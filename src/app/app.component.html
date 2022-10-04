@@ -13,7 +13,7 @@
           <th>Имя карты</th>
           <th>Фамилия</th>
           <th>Возраст</th>
-          <th>Удаление</th>
+          <th></th>
         </tr>
         </thead>
         <tbody>
@@ -21,8 +21,9 @@
           <td><span>{{item?.name}}</span></td>
           <td><span>{{item?.surname}}</span></td>
           <td><span>{{item?.age}}</span></td>
-          <td>
+          <td class="f-nc gap-4 pointer">
             <svg-icon (click)="deleteRowByCard(item?.id)" class="btn-delete" src="assets/images/delete.svg"></svg-icon>
+            <span>Удалить</span>
           </td>
         </tr>
         </tbody>
